@@ -30,7 +30,6 @@ class MainActivity : ComponentActivity() {
         ViewModelProvider(this)[MovieViewModel::class.java]
     }
 
-    @ExperimentalFoundationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val moviesList = viewModel.getPopularMovies()
@@ -44,7 +43,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@ExperimentalFoundationApi
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun MoviesListView(moviesList: Flow<PagingData<MoviesList.Movie>>) {
 

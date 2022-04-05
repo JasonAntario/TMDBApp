@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        kotlin_version = '1.5.31'
-        compose_version = '1.0.5'
+        kotlin_version = '1.6.10'
+        compose_version = '1.1.1'
         retrofit_version = '2.9.0'
     }
     repositories {
@@ -17,6 +17,8 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
